@@ -53,6 +53,6 @@ app.post("/calculate", async (req, res) => {
 app.get("/", (req, res) => {
   res.send("This is Calculator API.");
 });
-app.listen(8000, () => {
+app.listen(80, () => {
   console.log("server started on local host and port 8000!");
 });
