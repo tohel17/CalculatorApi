@@ -5,6 +5,7 @@ var options = {
   type: "application/json",
 };
 app.use(bodyParser.raw(options));
+const PORT = process.env.PORT || 3000;
 
 app.post("/calculate", async (req, res) => {
   try {
@@ -53,6 +54,6 @@ app.post("/calculate", async (req, res) => {
 app.get("/", (req, res) => {
   res.send("This is Calculator API.");
 });
-app.listen(80, () => {
+app.listen(PORT, () => {
   console.log("server started on local host and port 8000!");
 });
